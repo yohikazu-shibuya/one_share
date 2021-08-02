@@ -7,15 +7,33 @@
     </title>
   </head>
   <body>
-    <header class="site-header">
-      <a href="#" class="one_share">one_share</a>
-    </header>
+  <%= render "devise/shared/header" %>
 
     <div class="main">
     <% if user_signed_in? %>
-        <div class="user_nav">
-            <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+ 
+    <div class="manual-body">
+      <div class="manual-side">
+        <div class="manual-side-menu">
+          メニュー
         </div>
+        <p>マニュアル一覧</p>
+        <div class="manual-a">
+        <%= link_to "マニュアル追加", new_manual_path, class: "post" %><br>
+        </div>
+        <p>QA追加</p>
+      </div>
+      <div class="manual-list">
+        <div class="manual-list-menu">
+          一覧
+        </div>
+        <% @manuals.each do |manual| %>
+        <%= manual.question %><br>
+        <% end %>
+      </div>
+    </div>
+
+
     <% else %>
       <div class="main-menu">
         <div class="haiti">
