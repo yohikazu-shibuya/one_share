@@ -54,10 +54,16 @@ display: flex;
 }
 
 .manual-list{
+  text-align: left;
+  padding-left: 15px;
   font-size: 20px;
   height: 500px;
   width: 100%;
   background-color: rgb(233, 180, 209);
+}
+
+.manual-list-menu{
+  font-size: 30px;
 }
 
 .container {
@@ -66,4 +72,21 @@ display: flex;
   box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
   background-color: white;
   box-sizing: border-box;
+}
+
+.question-top{
+
+  border-color: white;
+
+}
+
+.answer-top{
+  
+  border-color: white;
+
+}
+.comments{
+  border: 2px solid;
+  width: 500px;
+  padding-left: 15px;
 }
