@@ -37,3 +37,6 @@
 ### Association
 - belongs_to :user
 - has_one :manual
+
+# ローカルでの動作方法
+- 作成予定
