@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="style.css">
+<div class="contents row">
+  <div class="container">
+    <h3>作成する</h3>
+    <%= form_with(model: @manual, local: true) do |form| %>
+      <%= form.text_field :name, placeholder: "名前" %><br>
+      <%= form.text_area :question, placeholder: "質問", rows: "5" %><br>
+      <%= form.text_area :answer, placeholder: "回答", rows: "10" %><br>
+      <%= form.submit "SEND" %>
+    <% end %>
+  </div>
+</div>
